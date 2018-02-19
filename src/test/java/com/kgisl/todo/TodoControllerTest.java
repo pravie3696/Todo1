@@ -26,7 +26,7 @@ public class TodoControllerTest {
     private TodoRepository todorepository;
 
     @Test
-    public void whenCreatingTodoItShouldReturnTheSavedTodo() {
+    public void whenCrea        tingTodoItShouldReturnTheSavedTodo() {
         System.out.println(EXISTING_TODO);
         given(todorepository.saveAndFlush(NEW_TODO)).willReturn((EXISTING_TODO));
         assertThat(todocontroller.create((NEW_TODO))).isSameAs(EXISTING_TODO);
